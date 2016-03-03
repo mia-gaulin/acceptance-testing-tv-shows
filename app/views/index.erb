@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Television Shows</title>
+    <link href="/styles.css" rel="stylesheet">
+
+  </head>
+  <body>
+    <h1>List of Shows</h1>
+
+    <h2>TV fanatics like you have recommended shows!</h2>
+
+    <h3><a href="/television_shows/new">Got a show to recommend?</a></h3>
+
+    <ul>
+      <% @shows.each do |show| %>
+        <% shows = show.split(",") %>
+        <li><%= "Title: #{shows[0]} (#{shows[1]})" %><br> <%= "Starting year: #{shows[2]}" %><br> <%= "Synopsis: #{shows[3]}" %><br><%= "Genre: #{shows[4]}" %></li>
+        <% end %>
+    </ul>
+  </body>
+
+</html>
